@@ -1,18 +1,10 @@
-// header {
-//   left: 0;
-//   right: 0;
-//   position: fixed;
-//   min-height: 50px;
-//   z-index: 105;
-
-//   // nav {
-//   //   -moz-transition: all .4s linear;
-//   //   -webkit-transition: all .4s linear;
-//   //   -o-transition: all .4s linear;
-//   //   transition: all .4s linear;
-//   //   height: 70px;
-//   // }
-
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
 nav {
   height: 70px;
   background: #FFF;
@@ -32,6 +24,7 @@ nav {
   transition: all 0.25s;
   top: 0;
   padding: 23px 0;
+  z-index: 5;
 
   a{
     font-size: 24px;
@@ -51,6 +44,7 @@ nav {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   top: 0;
+  z-index: 5;
 }
 .buns {
   content: '';
@@ -83,7 +77,7 @@ nav {
   transform: rotate(-45deg) translateY(0px);
 } 
 .hamburgerToggle {
-  position: absolute;
+  position: fixed;
   top: 48px;
   right: 0;
   bottom: 0;
@@ -96,15 +90,12 @@ nav {
   -webkit-overflow-scrolling: touch;
   transform: translateY(-100vh);
   transition: transform .4s ease-in;
-  z-index: -1;
+  z-index: 1;
+  background: #fff;
 }
 .slideIn {
   transform: translateY(0vh);
   transition: transform .4s ease-in;
-}
-
-.hamburgerToggle {
-  background: inherit;
 }
 .dropDownLink {
   font-size: 34px;
@@ -124,4 +115,12 @@ nav {
 }
 .dropDownList {
   padding-top: 20px;
+}
+.navBackground {
+  position: absolute;
+  height: 70px;
+  z-index: 4;
+  left: 0;
+  right: 0;
+  background: #fff;
 }

@@ -33,6 +33,7 @@ class Navbar extends React.Component {
                 <li className="dropDownListItem"><a className="dropDownLink" href="mailto:brianbixby0@gmail.com">Email</a></li>
               </ul>
             </section>
+            <div className='navBackground'></div>
           </div>
         </nav>
       </header>

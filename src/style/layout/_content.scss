@@ -15,6 +15,10 @@
   margin: 0 auto !important;
 }
 
+.pageContent {
+  margin-top: 70px;
+}
+
 @media (max-width: 567px) {
   .container {
     width: 90%;
@@ -28,6 +32,10 @@
   }
   .hamburgerToggle {
     padding: 0 5%;
+  }
+  .headline {
+    padding: 80px 0 110px;
+    margin: 0;
   }
 }
 @media (max-width: 767px) and (min-width: 568px) {
@@ -44,6 +52,10 @@
   .hamburgerToggle {
     padding: 0 10%;
   }
+  .headline {
+    padding: 80px 0 125px;
+    margin: 0;
+  }
 }
 @media (max-width: 979px) and (min-width: 768px) {
   .container {
@@ -58,6 +70,10 @@
   .logo {
     left: calc((100vw - 724px)/2);
   }
+  .headline {
+    padding: 100px 0 140px;
+    margin: 0;
+  }
 }
 @media (max-width: 1199px) and (min-width: 980px) {
   .hamburger {
@@ -68,6 +84,10 @@
   }
   .logo {
     left: calc((100vw - 940px)/2);
+  }
+  .headline {
+    padding: 120px 0 160px;
+    margin: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -82,5 +102,9 @@
   }
   .logo {
     left: calc((100vw - 1170px)/2);
+  }
+  .headline {
+    padding: 140px 0 200px;
+    margin: 0;
   }
 }
