@@ -53,15 +53,21 @@ class projectItemContainer extends React.Component {
         <div className='content'>
           <div className='coverImageWrapper'>
             <div className='coverImage' style={{background: `url(${current.image})`, transform: trans}}></div>
-            <div className='scrollWrapper' onClick={() => scrollToComponent(this.ProjectDescriptionWrapper, { offset: 0, align: 'top', duration: 1500})}>
+            <div className='scrollWrapper' onClick={() => scrollToComponent(this.ProjectDescriptionWrapper, { offset: 0, align: 'top' })}>
               <div className='iconDiv'>
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xlink" x="0px" y="0px" width="53px" height="20px" viewBox="0 0 53 20" enableBackground="new 0 0 53 20" xml="preserve"><g><polygon points="26.5,17.688 9.114,3.779 10.303,2.312 26.5,15.269 42.697,2.313 43.886,3.779"> </polygon></g></svg>
               </div>
             </div>
           </div>
           <div className='projectDescriptionWrapper' ref={(section) => { this.ProjectDescriptionWrapper = section; }}>
-            <p> project item page </p>
-            <p> {current.name} </p>
+            <div className='container'>
+              <div className='projectTitleWrapper'>
+                <p>{current.name}</p>
+              </div>
+              <div className='projectDescWrapper'>
+                <p> project item page </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
