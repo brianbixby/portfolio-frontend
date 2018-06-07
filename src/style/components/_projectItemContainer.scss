@@ -1,0 +1,32 @@
+.projectItemContent {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+
+  .content {
+    height: 100%;
+  }
+}
+.coverImageWrapper {
+
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+
+  .coverImage {
+    background-position: top center !important;
+    background-size: cover !important;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    line-height: 0;
+    overflow: hidden;
+    height: 100%;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    // background: url(http://via.placeholder.com/350);
+  }
+}

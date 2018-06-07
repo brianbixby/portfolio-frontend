@@ -7,7 +7,7 @@ import { logError } from './../../lib/util.js';
 class projectItemContainer extends React.Component {
   constructor(props){
     super(props);
-    this.state = { current: '', tries: 0 };
+    this.state = { current: '', tries: 0, trans: `translate3d(0px, 0px, 0px)`, };
   }
   componentWillMount() {
     if(!this.props.projects) {
@@ -17,6 +17,11 @@ class projectItemContainer extends React.Component {
     } else {
       this._filterCurrent();
     }
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   _filterCurrent = () => {
@@ -31,14 +36,26 @@ class projectItemContainer extends React.Component {
           .then(() => this._filterCurrent());
       }
     }
-  }
+  };
+
+  handleScroll = e => {
+    let scrollTop = window.scrollY/3;
+    this.setState({
+      trans: `translate3d(0px, ${scrollTop}px, 0px)`
+    });
+  };
 
   render() {
-    let { current } = this.state;
+    let { current, trans } = this.state;
     return(
-      <div className='pageContent'>
-        <p> project item page </p>
-        <p> {current.name} </p>
+      <div className='projectItemContent'>
+        <div className='content'>
+          <div className='coverImageWrapper'>
+            <div className='coverImage' style={{background: `url(${current.image})`, transform: trans}}></div>
+          </div>
+          <p> project item page </p>
+          <p> {current.name} </p>
+        </div>
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class About extends React.Component {
+class AboutContainer extends React.Component {
   constructor(props){
     super(props);
     this.state = { };
@@ -15,4 +15,4 @@ class About extends React.Component {
   }
 }
 
-export default About;
+export default AboutContainer;
