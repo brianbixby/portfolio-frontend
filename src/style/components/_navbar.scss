@@ -1,18 +1,10 @@
-// header {
-//   left: 0;
-//   right: 0;
-//   position: fixed;
-//   min-height: 50px;
-//   z-index: 105;
-
-//   // nav {
-//   //   -moz-transition: all .4s linear;
-//   //   -webkit-transition: all .4s linear;
-//   //   -o-transition: all .4s linear;
-//   //   transition: all .4s linear;
-//   //   height: 70px;
-//   // }
-
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
 nav {
   height: 70px;
   background: #FFF;
@@ -85,7 +77,7 @@ nav {
   transform: rotate(-45deg) translateY(0px);
 } 
 .hamburgerToggle {
-  position: absolute;
+  position: fixed;
   top: 48px;
   right: 0;
   bottom: 0;

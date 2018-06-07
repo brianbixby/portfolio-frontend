@@ -1,5 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
+import { projectsFetchRequest } from '../../actions/project-actions.js';
+import { logError } from './../../lib/util.js';
 import Tile from '../tile';
 
 class LandingContainer extends React.Component {
@@ -7,9 +10,15 @@ class LandingContainer extends React.Component {
     super(props);
     this.state = { };
   }
+  componentWillMount() {
+    this.props.projectsFetch()
+      .catch(err => logError(err));
+  }
 
   render() {
-    let projects = [{name: 'Bracket Busers', desc: 'NBA Pick em site', image: './assetts/bracketBusters.png'}, {name: 'Bracket Busers', desc: 'NBA Pick em site', image: './assetts/bracketBusters.png'}, {name: 'Bracket Busers', desc: 'NBA Pick em site', image: './assetts/bracketBusters.png'}];
+    let bb = require('./../assetts/bracketBusters.png');
+    // let projects = [{name: 'Bracket Busers', desc: 'NBA Pick em site', image: bb}, {name: 'Bracket Busers', desc: 'NBA Pick em site', image: bb}, {name: 'Bracket Busers', desc: 'NBA Pick em site', image: bb}];
+    let { projects } = this.props;
     return(
       <div className='pageContent'>
         <div className='headline'>
@@ -33,4 +42,12 @@ class LandingContainer extends React.Component {
   }
 }
 
-export default LandingContainer;
+let mapStateToProps = state => ({
+  projects: state.projects,
+});
+
+let mapDispatchToProps = dispatch => ({
+  projectsFetch: () => dispatch(projectsFetchRequest()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(LandingContainer);
