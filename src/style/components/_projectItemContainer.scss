@@ -27,6 +27,32 @@
     height: 100%;
     background-repeat: no-repeat !important;
     background-attachment: scroll !important;
-    // background: url(http://via.placeholder.com/350);
+  }
+  .scrollWrapper {
+    cursor: pointer;
+    height: 20px;
+    position: absolute;
+    bottom: 32px;
+    width: 100%;
+    z-index: 105;
+
+    .iconDiv {
+      transition: all .2s linear;
+      -moz-transition: all .2s linear;
+      -webkit-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      width: 100%;
+      position: absolute;
+      text-align: center;
+
+      svg {
+        fill: #777;
+        transition: all .5s;
+        transform-origin: 50% 50%;
+      }
+    }
+  }
+  .scrollWrapper:hover .iconDiv svg {
+    transform: scale(1.2);
   }
 }
