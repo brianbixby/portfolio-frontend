@@ -78,7 +78,7 @@ class Footer extends React.Component {
       this.props.messageCreate(this.state)
         .catch(err => {
           this.setState({ 
-            error,
+            error: err,
             submitted: true,
         });
       });
@@ -86,7 +86,7 @@ class Footer extends React.Component {
     this.setState(state => ({
       submitted: true,
       nameError: state.nameError || state.name ? null : 'required',
-      emailError: state.emailError || state.email ? null : 'required',
+      emailError: state.emailError || !isEmail(state.email) ? `${state.email} is not a valid email` : null,
       messageError: state.messageError || state.message ? null : 'required',
     }))
   };
@@ -95,7 +95,6 @@ class Footer extends React.Component {
     let { focused, submitted, email, emailError, message, messageError, name, nameError } = this.state;
     return (
       <div className='footerWrapper'>
-        {/* <div className='footerSpacer'></div> */}
         <div className='container'>
           <div className='footerTitleWrapper'>
             <p> Get in touch </p>

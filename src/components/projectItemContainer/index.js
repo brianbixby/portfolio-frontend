@@ -20,6 +20,7 @@ class projectItemContainer extends React.Component {
       this._filterCurrent();
     }
     window.addEventListener('scroll', this.handleScroll);
+    window.scrollTo(0, 0);
   }
 
   componentWillUnmount() {

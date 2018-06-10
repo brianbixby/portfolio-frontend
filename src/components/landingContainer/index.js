@@ -13,6 +13,7 @@ class LandingContainer extends React.Component {
   componentWillMount() {
     this.props.projectsFetch()
       .catch(err => logError(err));
+    window.scrollTo(0, 0);
   }
 
   render() {

@@ -6,6 +6,9 @@ class AboutContainer extends React.Component {
     super(props);
     this.state = { };
   }
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
 
   render() {
     return(
@@ -36,7 +39,6 @@ class AboutContainer extends React.Component {
             </div>
             <div className='projectDescWrapper'>
               <p className='experienceSectionHeader'>Code Fellows </p>
-              {/* <p>Full-Stack JavaScript development with 1,000+ hrs in class and creating deliverables. <br/> Highly focused in implementation of the MERN stack. <br/> Agile work environments and Git work flows utilized in assignments and one-week project sprints.</p> */}
               <p>Full-Stack JavaScript development with 1,000+ hrs in class and creating deliverables. </p>
               <p> Highly focused in implementation of the MERN stack. </p>
               <p> Agile work environments and Git work flows utilized in assignments and one-week project sprints.</p>
