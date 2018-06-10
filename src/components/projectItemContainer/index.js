@@ -2,8 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import scrollToComponent from 'react-scroll-to-component';
 
+import Footer2 from '../footer2';
 import { projectsFetchRequest } from '../../actions/project-actions.js';
-import { logError } from './../../lib/util.js';
+import { logError, renderIf } from './../../lib/util.js';
 
 class projectItemContainer extends React.Component {
   constructor(props){
@@ -65,11 +66,22 @@ class projectItemContainer extends React.Component {
                 <p>{current.name}</p>
               </div>
               <div className='projectDescWrapper'>
-                <p> project item page </p>
+                <p> {current.fullDesc} </p>
+                {renderIf(current.fullDesc1,
+                  <p> {current.fullDesc1} </p>
+                )}
+                {renderIf(current.fullDesc2,
+                  <p> {current.fullDesc2} </p>
+                )}
+                <p> 
+                  <a className="github" href={current.github} rel="noopener noreferrer" target="_blank">Github</a>
+                  <a className="site" href={current.site} rel="noopener noreferrer" target="_blank">Site</a>
+                </p>
               </div>
             </div>
           </div>
         </div>
+        <Footer2/>
       </div>
     );
   }
