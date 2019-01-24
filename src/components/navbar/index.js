@@ -13,7 +13,6 @@ class Navbar extends React.Component {
   handleHamburgerClick = () => this.setState({ navOpen: !this.state.navOpen });
 
   render() {
-    let navOpen
     return (
       <header>
         <nav>
