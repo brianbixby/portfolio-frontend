@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { projectsFetchRequest } from '../../actions/project-actions.js';
+import { projectsFetchRequest, projectFetchRequest } from '../../actions/project-actions.js';
 import { logError } from './../../lib/util.js';
 import Tile from '../tile';
 
@@ -17,8 +17,6 @@ class LandingContainer extends React.Component {
   }
 
   render() {
-    let bb = require('./../assetts/bracketBusters.png');
-    // let projects = [{name: 'Bracket Busers', desc: 'NBA Pick em site', image: bb}, {name: 'Bracket Busers', desc: 'NBA Pick em site', image: bb}, {name: 'Bracket Busers', desc: 'NBA Pick em site', image: bb}];
     let { projects } = this.props;
     return(
       <div className='pageContent'>
@@ -32,8 +30,8 @@ class LandingContainer extends React.Component {
         </div>
 
         <div className='tileContainer'>
-          {projects.map((project, idx) => {
-            return <div className='tileOuter' key={idx}>
+          {projects.map(project => {
+            return <div className='tileOuter' key={project._id}>
               <Tile project={project} />
             </div>
           })}
@@ -49,6 +47,7 @@ let mapStateToProps = state => ({
 
 let mapDispatchToProps = dispatch => ({
   projectsFetch: () => dispatch(projectsFetchRequest()),
+  projectFetch: url => dispatch(projectFetchRequest(url)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LandingContainer);

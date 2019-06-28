@@ -10,15 +10,15 @@ export const projectsFetch = projects => ({
   payload: projects,
 });
 
-export const projectFetchRequest = url => (dispatch, getState) => {
+export const projectFetchRequest = url => dispatch => {
   return superagent.get(`${process.env.API_URL}/api/project/${url}`)
     .then(res => {
-      dispatch(projectFetch(res.body.data));
+      dispatch(projectFetch(res.body));
       return res.body;
     });
 };
 
-export const projectsFetchRequest = () => (dispatch, getState) => {
+export const projectsFetchRequest = () => dispatch => {
   return superagent.get(`${process.env.API_URL}/api/projects`)
     .then(res => {
       dispatch(projectsFetch(res.body));
