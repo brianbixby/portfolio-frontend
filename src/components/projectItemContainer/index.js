@@ -33,6 +33,7 @@ class projectItemContainer extends React.Component {
 
   render() {
     let { currentProject } = this.props;
+    let myProject = this.props.currentProject && this.props.currentProject.projects ? this.props.currentProject.projects : null;
     let { trans } = this.state;
     return(
       <div className='projectItemContent'>
@@ -51,19 +52,34 @@ class projectItemContainer extends React.Component {
               <div className='projectTitleWrapper'>
                 <p>{currentProject.name}</p>
               </div>
-              <div className='projectDescWrapper'>
-                <p> {currentProject.fullDesc} </p>
-                {renderIf(currentProject.fullDesc1,
-                  <p> {currentProject.fullDesc1} </p>
-                )}
-                {renderIf(currentProject.fullDesc2,
-                  <p> {currentProject.fullDesc2} </p>
-                )}
-                <p> 
-                  <a className="github" href={currentProject.github} rel="noopener noreferrer" target="_blank">Github</a>
-                  <a className="site" href={currentProject.site} rel="noopener noreferrer" target="_blank">Site</a>
-                </p>
-              </div>
+              {renderIf(currentProject.url !== "projects-in-c" && currentProject.url !== "tensorflow",
+                <div className='projectDescWrapper'>
+                  <p> {currentProject.fullDesc} </p>
+                  {renderIf(currentProject.fullDesc1,
+                    <p> {currentProject.fullDesc1} </p>
+                  )}
+                  {renderIf(currentProject.fullDesc2,
+                    <p> {currentProject.fullDesc2} </p>
+                  )}
+                  <p>
+                    <a className="github" href={currentProject.github} rel="noopener noreferrer" target="_blank">Github</a>
+                    {renderIf(currentProject.site !== 'na', 
+                      <a className="site" href={currentProject.site} rel="noopener noreferrer" target="_blank">Site</a>
+                    )}
+                  </p>
+                </div>
+              )}
+              {myProject &&
+                <div className='projectDescWrapper'>
+                  {myProject.map((project, idx) => {
+                    return <div className='projectItemWrapper' key={idx}>
+                      <p className='name'>{project.projectName}</p>
+                      <p className='desc'>{project.projectDesc}</p>
+                      <p><a className="github" href={project.projectGithub} rel="noopener noreferrer" target="_blank">Github</a></p>
+                    </div>
+                  })}
+                </div>
+              }
             </div>
           </div>
         </div>
