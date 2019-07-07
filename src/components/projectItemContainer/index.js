@@ -61,6 +61,9 @@ class projectItemContainer extends React.Component {
                   {renderIf(currentProject.fullDesc2,
                     <p> {currentProject.fullDesc2} </p>
                   )}
+                  {renderIf(currentProject.keyTech,
+                    <p className='keyTechP'><span className='keyTech'>Key Tech </span>{currentProject.keyTech} </p>
+                  )}
                   <p>
                     <a className="github" href={currentProject.github} rel="noopener noreferrer" target="_blank">Github</a>
                     {renderIf(currentProject.site !== 'na', 

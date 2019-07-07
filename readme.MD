@@ -81,7 +81,6 @@ Information about the backendend of my Portfolio can be found here: [Portfolio B
 MIT © [Brian Bixby](https://github.com/brianbixby),
 
 to do list
-  - images
   - tensorflow
   - resume, linkedin, github
 
