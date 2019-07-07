@@ -19,7 +19,7 @@ class LandingContainer extends React.Component {
   render() {
     let { projects } = this.props;
     return(
-      <div className='pageContent'>
+      <div className='pageContent homePageContent'>
         <div className='headline'>
           <div className='container'>
             <div className='descContainer'>

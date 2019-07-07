@@ -36,7 +36,7 @@ class projectItemContainer extends React.Component {
     let myProject = this.props.currentProject && this.props.currentProject.projects ? this.props.currentProject.projects : null;
     let { trans } = this.state;
     return(
-      <div className='projectItemContent'>
+      <div className='projectItemContent' id={this.props.match.params.projectName}>
         {renderIf(currentProject && currentProject.image,
         <div className='content'>
           <div className='coverImageWrapper'>
@@ -83,7 +83,7 @@ class projectItemContainer extends React.Component {
             </div>
           </div>
         </div>
-        )};
+        )}
         <Footer2/>
       </div>
     );

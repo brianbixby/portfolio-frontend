@@ -13,6 +13,9 @@
   margin: 0;
   width: 100vw;
 }
+.homePageContent {
+  overflow: hidden;
+}
 
 @media (max-width: 567px) {
   .descContainer p {
@@ -23,6 +26,11 @@
 @media (max-width: 767px) and (min-width: 568px) {
   .descContainer p {
     font-size: 45px;
+  }
+}
+@media (min-width: 768px) {
+  .tileContainer {
+    height: 44.4444444vw;
   }
 }
 @media (max-width: 979px) and (min-width: 768px) {

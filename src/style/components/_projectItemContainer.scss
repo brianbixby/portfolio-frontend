@@ -115,6 +115,14 @@
 .projectItemWrapper:last-child {
   margin-bottom: 0;
 }
+#chow .coverImageWrapper {
+  margin-top: 70px;
+  max-height: calc((100vh - 70px));
+
+  .coverImage {
+    background-image: url("https://i.imgur.com/mkDjrVs.png") !important;
+  }
+}
 
 @media (max-width: 767px) {
   .projectTitleWrapper, .projectDescWrapper, .footerTitleWrapper, .footerFormWrapper {
@@ -129,6 +137,21 @@
   .projectDescWrapper p {
     font-size: 19px;
     line-height: 28px;
+  }
+  .projectDescriptionWrapper {
+    padding: 45px 0;
+  }
+  .projectTitleWrapper {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 499px) {
+  .coverImageWrapper {
+    margin-top: 70px;
+
+    .scrollWrapper {
+      display: none;
+    }
   }
 }
 @media (max-width: 979px) and (min-width: 768px) {
@@ -162,5 +185,42 @@
   .projectDescWrapper p {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+@media (max-aspect-ratio: 8/6) {
+  .coverImageWrapper {
+    height: calc((100vw / 1.5));
+    max-height: 100vh;
+
+    .coverImage {
+      background-position: center center !important;
+      background-size: contain !important;
+    }
+  }
+  .projectDescriptionWrapper {
+    padding: 45px 0;
+  }
+  .projectTitleWrapper {
+    margin-bottom: 30px;
+  }
+}
+#projects-in-c, #bracket-busters {
+  .coverImageWrapper .coverImage{
+    background-size: contain !important;
+  }
+}
+#projects-in-c .coverImageWrapper .coverImage{
+  height: 90%;
+}
+#weather-app .coverImageWrapper .coverImage {
+  background-position: center center !important;
+}
+#smart-incubator .coverImageWrapper .coverImage {
+  background-position: bottom center !important;
+}
+@media (max-width: 600px) and (min-width: 500px) {
+  #projects-in-c .coverImageWrapper .coverImage{
+    height: 80%;
   }
 }
