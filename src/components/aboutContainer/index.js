@@ -15,7 +15,7 @@ class AboutContainer extends React.Component {
       <div className='pageContent'>
         <div className='aboutHeader'>
           <div className='container'>
-            <p> Hello, I’m a Fullstack Javascript Developer in Seattle, WA. I've recently had the pleasure of honing my skillset through an immersive web development program at Codefellows, previously I crafted digital experiences at John L. Scott. </p>
+            <p> Hello, I’m a Fullstack Javascript Developer in Seattle, WA. Over the last year I've had the pleasure of honing my skillset through an immersive software engineering program at 42 Silicon Valley, previously I crafted digital experiences at John L. Scott. </p>
           </div>
         </div>
         <div className='spacer'></div>
@@ -25,7 +25,7 @@ class AboutContainer extends React.Component {
               <p>About Me</p>
             </div>
             <div className='projectDescWrapper'>
-              <p>Over the last year and a half I’ve been fortunate to make a career out of the things I love doing. I’ve designed and created over 100 websites for real estate teams, corporate offices and a biotech consulting firm. I’ve had the pleasure of collaborating with some of the best people I've met in my life along the way. </p>
+              <p>Over the last year and a half I’ve been fortunate to go back to school, but before that I was making a career out of the things I love doing. I’ve designed and created over 100 websites for real estate teams, corporate offices and a biotech consulting firm. I’ve had the pleasure of collaborating with some of the best people I've met in my life along the way. </p>
               <p>I love the process of working through new challenges, towards higher goals, and working as part of a team. I believe that anything can be accomplished with a great attitude and strong work ethic.</p>
               <p>I’m always keen to collaborate, so if you have an interesting project or idea - please don’t hesitate to get in touch.</p>
             </div>
@@ -38,6 +38,9 @@ class AboutContainer extends React.Component {
               <p>Recent Experience</p>
             </div>
             <div className='projectDescWrapper'>
+              <p className='experienceSectionHeader'>42 Silicon Valley </p>
+              <p>Software development with a focus on C and Linux, averaged 50+ hrs a week.</p>
+              <p>Member of the 42 Robotics Lab, engineered a smart incubator for Stanford Researchers and completed course work in Tensorflow.</p>
               <p className='experienceSectionHeader'>Code Fellows </p>
               <p>Full-Stack JavaScript development with 1,000+ hrs in class and creating deliverables. </p>
               <p> Highly focused in implementation of the MERN stack. </p>

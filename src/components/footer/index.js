@@ -76,6 +76,9 @@ class Footer extends React.Component {
     e.preventDefault();
     if(!this.state.error) {
       this.props.messageCreate(this.state)
+        .then(() => {
+          this.setState({ name: '', email: '', message: '' });
+        })
         .catch(err => {
           this.setState({ 
             error: err,
