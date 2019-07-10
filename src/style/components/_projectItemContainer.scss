@@ -74,14 +74,20 @@
   font-size: 28px;
   line-height: 40px;
 }
-.projectDescWrapper p {
-  font-size: 18px;
-  line-height: 26px;
-  word-wrap: break-word;
-  font-weight: 300;
-  color: #333;
-  margin-bottom: 15px;
-}
+.projectDescWrapper{
+  p {
+    font-size: 18px;
+    line-height: 26px;
+    word-wrap: break-word;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 15px;
+
+    .hidden {
+      display: none;
+    }
+  }
+} 
 .projectTitleWrapper, .projectDescWrapper, .footerTitleWrapper, .footerFormWrapper {
   display: inline-block;
 }
@@ -131,6 +137,9 @@
   color: #333;
   margin-bottom: 15px;
   display: block;
+}
+.projectDescWrapper .fullDesc .fw300 {
+  font-weight: 300;
 }
 @media (max-width: 767px) {
   .projectTitleWrapper, .projectDescWrapper, .footerTitleWrapper, .footerFormWrapper {

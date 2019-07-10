@@ -4,7 +4,7 @@ import scrollToComponent from 'react-scroll-to-component';
 
 import Footer2 from '../footer2';
 import { projectFetchRequest } from '../../actions/project-actions.js';
-import { logError, renderIf } from './../../lib/util.js';
+import { logError, renderIf, classToggler } from './../../lib/util.js';
 
 class projectItemContainer extends React.Component {
   constructor(props){
@@ -34,7 +34,7 @@ class projectItemContainer extends React.Component {
   render() {
     let { currentProject } = this.props;
     let myProject = this.props.currentProject && this.props.currentProject.projects ? this.props.currentProject.projects : null;
-    let { trans } = this.state;
+    let { trans } = this.state; 
     return(
       <div className='projectItemContent' id={this.props.match.params.projectName}>
         {renderIf(currentProject && currentProject.image,
@@ -54,7 +54,7 @@ class projectItemContainer extends React.Component {
               </div>
               {renderIf(currentProject.url !== "projects-in-c",
                 <div className='projectDescWrapper'>
-                  <p> {currentProject.fullDesc} </p>
+                  <p className='fullDesc'> {currentProject.fullDesc} <span className={classToggler({ 'fw300': true, 'hidden': currentProject.url !== "tensorflow"})}><a className='site' href='https://arxiv.org/pdf/1712.04440.pdf' rel='noopener noreferrer' target='_blank'>Facebook's scholarly article</a> with the Mnist dataset.</span></p>
                   {renderIf(currentProject.fullDesc1,
                     <p> {currentProject.fullDesc1} </p>
                   )}
