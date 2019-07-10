@@ -123,7 +123,15 @@
     background-image: url("https://i.imgur.com/mkDjrVs.png") !important;
   }
 }
-
+.keyTech {
+  font-size: 20px;
+  line-height: 26px;
+  word-wrap: break-word;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  display: block;
+}
 @media (max-width: 767px) {
   .projectTitleWrapper, .projectDescWrapper, .footerTitleWrapper, .footerFormWrapper {
     display: block;
@@ -205,12 +213,12 @@
     margin-bottom: 30px;
   }
 }
-#projects-in-c, #bracket-busters {
+#projects-in-c, #tensorflow, #bracket-busters {
   .coverImageWrapper .coverImage{
     background-size: contain !important;
   }
 }
-#projects-in-c .coverImageWrapper .coverImage{
+#projects-in-c .coverImageWrapper .coverImage, #tensorflow .coverImageWrapper .coverImage{
   height: 90%;
 }
 #weather-app .coverImageWrapper .coverImage {
@@ -220,7 +228,7 @@
   background-position: bottom center !important;
 }
 @media (max-width: 600px) and (min-width: 500px) {
-  #projects-in-c .coverImageWrapper .coverImage{
+  #projects-in-c .coverImageWrapper .coverImage, #tensorflow .coverImageWrapper .coverImage{
     height: 80%;
   }
 }

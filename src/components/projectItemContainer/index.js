@@ -52,7 +52,7 @@ class projectItemContainer extends React.Component {
               <div className='projectTitleWrapper'>
                 <p>{currentProject.name}</p>
               </div>
-              {renderIf(currentProject.url !== "projects-in-c" && currentProject.url !== "tensorflow",
+              {renderIf(currentProject.url !== "projects-in-c",
                 <div className='projectDescWrapper'>
                   <p> {currentProject.fullDesc} </p>
                   {renderIf(currentProject.fullDesc1,
