@@ -1,3 +1,6 @@
+.hiddenBr {
+  display: none;
+}
 .descContainer p {
   color: #000;
 }
@@ -22,6 +25,11 @@
     font-size: 37px;
   }
 
+}
+@media (max-width: 702px) and (min-width: 300px) {
+  .hiddenBr {
+    display: block;
+  }
 }
 @media (max-width: 767px) and (min-width: 568px) {
   .descContainer p {

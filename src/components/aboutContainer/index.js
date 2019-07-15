@@ -15,7 +15,7 @@ class AboutContainer extends React.Component {
       <div className='pageContent'>
         <div className='aboutHeader'>
           <div className='container'>
-            <p> Hello, I’m a Fullstack Javascript Developer in Seattle, WA. Over the last year I've had the pleasure of honing my skillset through an immersive software engineering program at 42 Silicon Valley, previously I crafted digital experiences at John L. Scott. </p>
+            <p> Hello, I’m a Full Stack Software Engineer in Seattle, WA. Over the last year I've had the pleasure of honing my skillset through an immersive software engineering program at 42 Silicon Valley, previously I crafted digital experiences at John L. Scott. </p>
           </div>
         </div>
         <div className='spacer'></div>
