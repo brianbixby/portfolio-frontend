@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { projectsFetchRequest, projectFetchRequest } from '../../actions/project-actions.js';
 import { logError } from './../../lib/util.js';
 import Tile from '../tile';
+import css from './../../style/main.scss';
 
 class LandingContainer extends React.Component {
   constructor(props){
@@ -18,6 +19,7 @@ class LandingContainer extends React.Component {
 
   render() {
     let { projects } = this.props;
+    let chow = require('./../assetts/chow.webp');
     return(
       <div className='pageContent homePageContent'>
         <div className='headline'>
