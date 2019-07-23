@@ -35,18 +35,20 @@ class projectItemContainer extends React.Component {
     let { currentProject } = this.props;
     let myProject = this.props.currentProject && this.props.currentProject.projects ? this.props.currentProject.projects : null;
     let { trans } = this.state;
-    const bb = require("./../assetts/bb2.webp");
-    const c = require("./../assetts/c.webp");
-    const chow = require("./../assetts/chow2.webp");
-    const si = require("./../assetts/si.webp");
-    const tf = require("./../assetts/tf.webp");
-    const weather = require("./../assetts/weather.webp");
+    const obj = {
+      bb: require("./../assetts/bb2.webp"),
+      c: require("./../assetts/c.webp"),
+      chow: require("./../assetts/chow2.webp"),
+      si: require("./../assetts/si.webp"),
+      tf: require("./../assetts/tf.webp"),
+      weather: require("./../assetts/weather.webp")
+    };
     return(
       <div className='projectItemContent' id={this.props.match.params.projectName}>
         {renderIf(currentProject && currentProject.image,
         <div className='content'>
           <div className='coverImageWrapper'>
-            <div className='coverImage' style={{background: `url(${currentProject.image})`, transform: trans}}></div>
+            <div className='coverImage' style={{background: `url(${obj[currentProject.image]})`, transform: trans}}></div>
             <div className='scrollWrapper' onClick={() => scrollToComponent(this.ProjectDescriptionWrapper, { offset: 0, align: 'top' })}>
               <div className='iconDiv'>
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xlink" x="0px" y="0px" width="53px" height="20px" viewBox="0 0 53 20" enableBackground="new 0 0 53 20" xml="preserve"><g><polygon points="26.5,17.688 9.114,3.779 10.303,2.312 26.5,15.269 42.697,2.313 43.886,3.779"> </polygon></g></svg>

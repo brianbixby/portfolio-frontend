@@ -9,16 +9,18 @@ class Tile extends React.Component {
 
   render() {
     let { project } = this.props;
-    const bb = require("./../assetts/bb2.webp");
-    const c = require("./../assetts/c.webp");
-    const chow = require("./../assetts/chow2.webp");
-    const si = require("./../assetts/si.webp");
-    const tf = require("./../assetts/tf.webp");
-    const weather = require("./../assetts/weather.webp");
+    const obj = {
+      bb: require("./../assetts/bb2.webp"),
+      c: require("./../assetts/c.webp"),
+      chow: require("./../assetts/chow2.webp"),
+      si: require("./../assetts/si.webp"),
+      tf: require("./../assetts/tf.webp"),
+      weather: require("./../assetts/weather.webp")
+    };
     return(
       <Link to={`/project/${project.url}`}>
         <div className='tileWrapper'>
-          <img src={JSON.parse(project.image)} />
+          <img src={obj[project.image]} />
           <div className='tileInner'>
             <div className='text'>
               <p className='projectName'>{project.name} </p>
