@@ -34,7 +34,13 @@ class projectItemContainer extends React.Component {
   render() {
     let { currentProject } = this.props;
     let myProject = this.props.currentProject && this.props.currentProject.projects ? this.props.currentProject.projects : null;
-    let { trans } = this.state; 
+    let { trans } = this.state;
+    const bb = require("./../assetts/bb2.webp");
+    const c = require("./../assetts/c.webp");
+    const chow = require("./../assetts/chow2.webp");
+    const si = require("./../assetts/si.webp");
+    const tf = require("./../assetts/tf.webp");
+    const weather = require("./../assetts/weather.webp");
     return(
       <div className='projectItemContent' id={this.props.match.params.projectName}>
         {renderIf(currentProject && currentProject.image,

@@ -9,6 +9,12 @@ class Tile extends React.Component {
 
   render() {
     let { project } = this.props;
+    const bb = require("./../assetts/bb2.webp");
+    const c = require("./../assetts/c.webp");
+    const chow = require("./../assetts/chow2.webp");
+    const si = require("./../assetts/si.webp");
+    const tf = require("./../assetts/tf.webp");
+    const weather = require("./../assetts/weather.webp");
     return(
       <Link to={`/project/${project.url}`}>
         <div className='tileWrapper'>
