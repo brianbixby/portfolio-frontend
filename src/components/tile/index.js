@@ -18,7 +18,7 @@ class Tile extends React.Component {
     return(
       <Link to={`/project/${project.url}`}>
         <div className='tileWrapper'>
-          <img src={project.image} />
+          <img src={JSON.parse(project.image)} />
           <div className='tileInner'>
             <div className='text'>
               <p className='projectName'>{project.name} </p>
