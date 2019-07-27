@@ -25,7 +25,7 @@ class LandingContainer extends React.Component {
           <div className='container'>
             <div className='descContainer'>
               <p className='name'>Brian Bixby </p>
-              <p className='title'>Front End <br className='hiddenBr'/> Developer</p>
+              <p className='title'>Front End Developer</p>
             </div>
           </div>
         </div>
