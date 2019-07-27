@@ -19,15 +19,13 @@ class LandingContainer extends React.Component {
 
   render() {
     let { projects } = this.props;
-    let chow = require('./../assetts/chow.webp');
-    let bb2 = require('./../assetts/bb2.webp');
     return(
       <div className='pageContent homePageContent'>
         <div className='headline'>
           <div className='container'>
             <div className='descContainer'>
               <p className='name'>Brian Bixby </p>
-              <p className='title'>Full Stack <br className='hiddenBr'/> Software Engineer</p>
+              <p className='title'>Front End <br className='hiddenBr'/> Software Engineer</p>
             </div>
           </div>
         </div>

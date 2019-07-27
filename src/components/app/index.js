@@ -1,10 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
+import { makeAsyncComponent } from "./../../lib/util.js";
 import Navbar from '../navbar';
 import LandingContainer from '../landingContainer';
-import AboutContainer from '../aboutContainer';
-import ProjectItemContainer from '../projectItemContainer';
+
+const AboutContainer = makeAsyncComponent(import('../aboutContainer'));
+const ProjectItemContainer = makeAsyncComponent(import('../projectItemContainer'));
 
 class App extends React.Component {
   render() {
