@@ -32,18 +32,10 @@ class projectItemContainer extends React.Component {
   };
 
   render() {
-    let { currentProject, browser } = this.props;
+    let { currentProject } = this.props;
     let myProject = this.props.currentProject && this.props.currentProject.projects ? this.props.currentProject.projects : null;
     let { trans } = this.state;
-    const obj1 = {
-      bb: require("./../assetts/bb2.webp"),
-      c: require("./../assetts/c.webp"),
-      chow: require("./../assetts/chow2.webp"),
-      si: require("./../assetts/si.webp"),
-      tf: require("./../assetts/tf.webp"),
-      weather: require("./../assetts/weather.webp")
-    };
-    const obj2 = {
+    const obj = {
       bb: require("./../assetts/bb2.png"),
       c: require("./../assetts/c.png"),
       chow: require("./../assetts/chow2.png"),
@@ -51,7 +43,6 @@ class projectItemContainer extends React.Component {
       tf: require("./../assetts/tf.png"),
       weather: require("./../assetts/weather.png")
     };
-    let obj = browser === "chrome" ? obj1 : obj2;
     return(
       <div className='projectItemContent' id={this.props.match.params.projectName}>
         {renderIf(currentProject && currentProject.image,

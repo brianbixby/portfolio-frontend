@@ -1,8 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { browserFetchRequest } from '../../actions/browser-actions.js';
 import { classToggler } from './../../lib/util.js';
 
 
@@ -10,10 +8,6 @@ class Navbar extends React.Component {
   constructor(props){
     super(props);
     this.state = { navOpen: false };
-  }
-
-  componentWillMount() {
-    this.props.browserFetch();
   }
   
   handleHamburgerClick = () => this.setState({ navOpen: !this.state.navOpen });
@@ -45,8 +39,4 @@ class Navbar extends React.Component {
   }
 }
 
-let mapDispatchToProps = dispatch => ({
-  browserFetch: () => dispatch(browserFetchRequest()),
-});
-
-export default connect(null, mapDispatchToProps)(Navbar);
+export default Navbar;
