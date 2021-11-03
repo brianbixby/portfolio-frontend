@@ -61,7 +61,7 @@
     "react-scroll-to-component": "^1.0.2",
     "redux": "^4.0.1",
     "superagent": "^5.1.0",
-    "validator": "^11.0.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
